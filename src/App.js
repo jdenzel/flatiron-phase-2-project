@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import Home from './Home';
 import Listings from './Listings';
+import Card from './Card';
 
 
 function App() {
@@ -17,10 +18,13 @@ function App() {
   }, []);
 
 
+
+
   return (
     <div>
       <Home homes={homes} />
       <Listings homes={homes} />
+      <Card homes={homes} />
     </div>
   );
 }
