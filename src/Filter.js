@@ -49,11 +49,23 @@ function Filter({ homes, setFilteredHomes }) {
             </label>
             <label>
                 Beds:
-                <select value={beds} onChange={(e) => setBeds(e.target.value)}/>
+                <select value={beds} onChange={(e) => setBeds(e.target.value)}>
+                    <option>Number of Beds</option>
+                    <option value="1">1 Bed</option>
+                    <option value="2">2 Beds</option>
+                    <option value="3">3 Beds</option>
+                    <option value="4">4 Beds</option>
+                </select>
             </label>
             <label>
                 Bathrooms:
-                <select value={bathrooms} onChange={(e) => setBathrooms(e.target.value)}/>
+                <select value={bathrooms} onChange={(e) => setBathrooms(e.target.value)}>
+                    <option>Number of Baths</option>
+                    <option value="1">1 Bath</option>
+                    <option value="2">2 Baths</option>
+                    <option value="3">3 Baths</option>
+                    <option value="4">4 Baths</option>
+                </select>
             </label>
             <button onClick={handleFilter}>Filter</button>
         </div>
