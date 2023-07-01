@@ -4,6 +4,7 @@ import Home from './Home';
 import Listings from './Listings';
 import { Route, Switch } from "react-router-dom";
 import NavBar from './NavBar';
+import ListingsForm from './ListingsForm';
 
 
 function App() {
@@ -23,9 +24,14 @@ function App() {
       <NavBar />
       <Route path="/" >
       <Home homes={homes} />
-      </Route>  
+      </Route>
+        
       <Route path="/listings" > 
       <Listings homes={homes} />
+      </Route>
+
+      <Route path="/listingsform" >
+      <ListingsForm homes={homes} />
       </Route>
       </div>
   );
