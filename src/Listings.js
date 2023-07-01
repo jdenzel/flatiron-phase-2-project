@@ -8,6 +8,9 @@ function Listings({ homes }) {
 
     
 
+
+    
+
     // function handleSearchChange(event)  {
     //     setSearch(event.target.value);
     //   }
