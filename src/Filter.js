@@ -1,11 +1,11 @@
 import React, {useState} from "react";
 
-function Filter({ homes, setFilteredHomes }) {
+function Filter({ homes, onFilterChange }) {
 
-    const [county, setCounty] = useState([]);
-    const [type, setType] = useState([]);
-    const [beds, setBeds] = useState([]);
-    const [bathrooms, setBathrooms] = useState([]);
+    const [county, setCounty] = useState('');
+    const [type, setType] = useState('');
+    const [beds, setBeds] = useState('');
+    const [bathrooms, setBathrooms] = useState('');
 
     const handleFilter = () => {
         const filteredHomes = homes.filter((home) => {
@@ -16,11 +16,12 @@ function Filter({ homes, setFilteredHomes }) {
                 (bathrooms === "All" || home.bathrooms === bathrooms)
             );
         });
-        setFilteredHomes(filteredHomes);
+        onFilterChange(filteredHomes);
+        console.log(county)
+        console.log(type)
+        console.log(beds)
+        console.log(bathrooms)
     };
-
-
-
 
     return (
         <div>
@@ -43,6 +44,7 @@ function Filter({ homes, setFilteredHomes }) {
                 <select value={type} onChange={(e) => setType(e.target.value)}>
                     <option value="All">All</option>
                     <option value="Apartment">Condo</option>
+                    <option value="Condo">Condo</option>
                     <option value="House">House</option>
                     <option value="Townhouse">Townhouse</option>
                 </select>
@@ -50,7 +52,8 @@ function Filter({ homes, setFilteredHomes }) {
             <label>
                 Beds:
                 <select value={beds} onChange={(e) => setBeds(e.target.value)}>
-                    <option>Number of Beds</option>
+                    <option value="All"> All </option>
+                    {/* <option>Number of Beds</option> */}
                     <option value="1">1 Bed</option>
                     <option value="2">2 Beds</option>
                     <option value="3">3 Beds</option>
@@ -60,13 +63,15 @@ function Filter({ homes, setFilteredHomes }) {
             <label>
                 Bathrooms:
                 <select value={bathrooms} onChange={(e) => setBathrooms(e.target.value)}>
-                    <option>Number of Baths</option>
+                    <option value="All"> All </option>
+                    {/* <option>Number of Baths</option> */}
                     <option value="1">1 Bath</option>
                     <option value="2">2 Baths</option>
                     <option value="3">3 Baths</option>
                     <option value="4">4 Baths</option>
                 </select>
             </label>
+            
             <button onClick={handleFilter}>Filter</button>
         </div>
     );

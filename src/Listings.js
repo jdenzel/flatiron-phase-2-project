@@ -6,10 +6,9 @@ function Listings({ homes }) {
 
     const [filteredHomes, setFilteredHomes] = useState(homes);
 
-    
-
-
-    
+    function handleFilterChange(filteredHomes) {
+        setFilteredHomes(filteredHomes);
+    }
 
     // function handleSearchChange(event)  {
     //     setSearch(event.target.value);
@@ -19,11 +18,10 @@ function Listings({ homes }) {
     //     setItemState([...itemState, newItem])
     //   }
     
-
     return (
         <div>
-            <Filter homes={homes}  setFilteredHomes={setFilteredHomes}/>
-            <Card homes={filteredHomes} />
+            <Filter homes={homes} onFilterChange={handleFilterChange} />
+            <Card homes={homes} />
         </div>
 
     );

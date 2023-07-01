@@ -2,8 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import Home from './Home';
 import Listings from './Listings';
-import Card from './Card';
-// import Select from "react-select";
+import { Route } from "react-router-dom";
 
 
 function App() {
@@ -20,11 +19,13 @@ function App() {
 
   return (
     <div>
+      <Route path="/" >
       <Home homes={homes} />
+      </Route>  
+      <Route path="/listings" > 
       <Listings homes={homes} />
-      
-    </div>
+      </Route>
+      </div>
   );
 }
-
 export default App;
