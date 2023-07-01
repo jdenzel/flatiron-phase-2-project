@@ -18,14 +18,11 @@ function App() {
   getHome();  
   }, []);
 
-
-
-
   return (
     <div>
       <Home homes={homes} />
       <Listings homes={homes} />
-      <Card homes={homes} />
+      
     </div>
   );
 }

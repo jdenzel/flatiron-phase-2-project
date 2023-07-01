@@ -1,20 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import Card from "./Card";
+import Filter from "./Filter";
 
 function Listings({ homes }) {
 
+    const [filteredHomes, setFilteredHomes] = useState(homes);
+
+    
+
+    // function handleSearchChange(event)  {
+    //     setSearch(event.target.value);
+    //   }
+    
+    //   function handleItemFormSubmit(newItem)  {
+    //     setItemState([...itemState, newItem])
+    //   }
     
 
     return (
         <div>
-            {homes.map(home => (
-         <p key={home.id}> {home.county} </p>
-         ))
-            }
-
-            <h1>Listings</h1>
-
-            <p>Listings page body content</p>
+            <Filter homes={homes}  setFilteredHomes={setFilteredHomes}/>
+            <Card homes={filteredHomes} />
         </div>
+
     );
 }
 
