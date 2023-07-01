@@ -19,19 +19,22 @@ function App() {
   getHome();  
   }, []);
 
+  const onAddHome = (newHome) => {
+    setHome([...homes, newHome])
+  }
   return (
     <div>
       <NavBar />
       <Route path="/" >
       <Home homes={homes} />
       </Route>
-        
+
       <Route path="/listings" > 
       <Listings homes={homes} />
       </Route>
 
       <Route path="/listingsform" >
-      <ListingsForm homes={homes} />
+      <ListingsForm onAddHome={onAddHome} homes={homes} />
       </Route>
       </div>
   );
