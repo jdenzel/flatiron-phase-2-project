@@ -41,7 +41,11 @@ function Filter({ homes, setFilteredHomes }) {
             <label>
                 Type:
                 <select value={type} onChange={(e) => setType(e.target.value)}>
-                    
+                    <option value="All">All</option>
+                    <option value="Apartment">Condo</option>
+                    <option value="House">House</option>
+                    <option value="Townhouse">Townhouse</option>
+                </select>
             </label>
             <label>
                 Beds:
