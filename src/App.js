@@ -2,7 +2,8 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import Home from './Home';
 import Listings from './Listings';
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import NavBar from './NavBar';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <div>
+      <NavBar />
       <Route path="/" >
       <Home homes={homes} />
       </Route>  
