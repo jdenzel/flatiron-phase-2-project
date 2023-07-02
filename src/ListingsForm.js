@@ -46,7 +46,7 @@ function ListingsForm({ homes, onAddHome }) {
         <button type="submit">Add Home</button>
     </form>
 
-    <Card homes={homes} />
+    {/* <Card homes={homes} /> */}
     </div>
 
   );
