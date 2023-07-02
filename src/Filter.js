@@ -6,6 +6,7 @@ function Filter({ homes, onFilterChange }) {
     const [type, setType] = useState('');
     const [beds, setBeds] = useState('');
     const [bathrooms, setBathrooms] = useState('');
+    const [favorites, setFavorites] = useState([]);
 
     const handleFilter = () => {
         const filteredHomes = homes.filter((home) => {
