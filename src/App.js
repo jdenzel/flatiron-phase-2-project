@@ -25,7 +25,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Route exact path="/" >
+      <Route exact path="/home" >
       <Home homes={homes} />
       </Route>
 

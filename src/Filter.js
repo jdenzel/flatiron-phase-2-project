@@ -36,7 +36,7 @@ function Filter({ homes, onFilterChange }) {
         console.log(bathrooms)
     };
     return (
-        <div>
+        <div className="filter-box">
             <label>
                 County:
                 <select value={county} onChange={(e) => setCounty(e.target.value)}>
