@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function ListingsForm({ homes, onAddHome }) {
+function ListingsForm({ onAddHome }) {
 
     const [formData, setFormData] = useState({
         county: "",
@@ -34,7 +34,7 @@ function ListingsForm({ homes, onAddHome }) {
 
   return (
     <div className="form" id="addHome">
-      <h1>ListingsForm</h1>
+      <h1>List a home!</h1>
       <p>ListingsForm page body content</p>
       <form onSubmit={handleSubmit}>
         <input type="text" onChange={handleChange} name="county" value={formData.county} placeholder="County" />

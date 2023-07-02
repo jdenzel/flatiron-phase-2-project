@@ -129,9 +129,28 @@ li a:hover:not(.active) {
   color: white;
   font-size: 20px;
   border: 1px solid #ccc;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
+}
+
+.filter-btn{
+  position: relative;
+  top: 20%;
+  height: 50px;
+  width: 100px;
+  background-color: #333;
+  color: #EAAB00;
+  font-size: 20px;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.filter-btn:hover {
+  background-color: rgb(200, 18, 44);
+  color: white;
 }
 
 

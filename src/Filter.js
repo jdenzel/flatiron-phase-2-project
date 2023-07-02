@@ -65,7 +65,7 @@ function Filter({ homes, onFilterChange }) {
                 Beds:
                 <select value={beds} onChange={(e) => setBeds(e.target.value)}>
                     <option defaultValue="All"> All </option>
-                    {/* <option>Number of Beds</option> */}
+
                     <option value="1">1 Bed</option>
                     <option value="2">2 Beds</option>
                     <option value="3">3 Beds</option>
@@ -76,16 +76,17 @@ function Filter({ homes, onFilterChange }) {
                 Bathrooms:
                 <select value={bathrooms} onChange={(e) => setBathrooms(e.target.value)}>
                     <option defaultValue="All"> All </option>
-                    {/* <option>Number of Baths</option> */}
                     <option value="1">1 Bath</option>
                     <option value="2">2 Baths</option>
                     <option value="3">3 Baths</option>
                     <option value="4">4 Baths</option>
                 </select>
             </label>
-            <button onClick={handleFilter}>Filter</button>
-
+            <div>
+            <button class="filter-btn" onClick={handleFilter}>Filter</button>
         </div>
+        </div>
+        
         
 
 
