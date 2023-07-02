@@ -5,7 +5,6 @@ import Listings from './Listings';
 import { Route, Switch } from "react-router-dom";
 import NavBar from './NavBar';
 import ListingsForm from './ListingsForm';
-import Video from './Video';
 
 
 function App() {
@@ -26,7 +25,6 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Video />
       <Route exact path="/" >
       <Home homes={homes} />
       </Route>

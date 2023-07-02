@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import Video from './Video';
+
 
 function Home({ homes }) {
 
@@ -6,7 +8,7 @@ function Home({ homes }) {
         <div>
             <h1>Home</h1>
             <h3>Find Your Home in Maryland</h3>
-            <img src="https://reactjs.org/logo-og.png" alt="React Image" />
+            <Video />
             
         </div>
     );
