@@ -9,7 +9,11 @@ const Video = () => {
                 <div className="overlay">
                 <div className="drone-content">
                 <h1>Find Your Home in Maryland</h1>
-                <NavLink to="/listings"><button>Get Started</button></NavLink>
+                <NavLink to="/listings">
+                <button className="video-btn">
+                Get Started
+                </button >
+                </NavLink>
                 </div>
             </div>
         </div>

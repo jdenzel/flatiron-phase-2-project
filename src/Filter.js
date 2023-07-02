@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 function Filter({ homes, onFilterChange }) {
 
@@ -6,6 +8,12 @@ function Filter({ homes, onFilterChange }) {
     const [type, setType] = useState('All');
     const [beds, setBeds] = useState('All');
     const [bathrooms, setBathrooms] = useState('All');
+
+    const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
 
     const handleFilter = () => {
 
@@ -76,7 +84,11 @@ function Filter({ homes, onFilterChange }) {
                 </select>
             </label>
             <button onClick={handleFilter}>Filter</button>
+
         </div>
+        
+
+
     );
 }
 
