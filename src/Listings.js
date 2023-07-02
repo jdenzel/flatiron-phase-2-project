@@ -11,7 +11,7 @@ function Listings({ homes }) {
     }
     
     return (
-        <div>
+        <div className="listings">
             <Filter homes={homes} onFilterChange={handleFilterChange} />
             <Card homes={filteredHomes} />
         </div>
