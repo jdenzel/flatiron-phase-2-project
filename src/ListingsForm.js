@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import Card from "./Card";
 
 function ListingsForm({ homes, onAddHome }) {
 
@@ -18,7 +19,8 @@ function ListingsForm({ homes, onAddHome }) {
     }
 
     function handleSubmit(event){
-        event.preventDefault();
+        event.preventDefault()
+    
 
         fetch("http://localhost:3333/homes", {
             method: "POST",
@@ -28,7 +30,7 @@ function ListingsForm({ homes, onAddHome }) {
         .then((r) => r.json())
         .then((newHome) => {onAddHome(newHome);
             console.log(newHome);
-    });
+        });
     }
 
   return (
@@ -36,12 +38,6 @@ function ListingsForm({ homes, onAddHome }) {
       <h1>ListingsForm</h1>
       <p>ListingsForm page body content</p>
       <form onSubmit={handleSubmit}>
-        {/* <input type="text" onChange={handleChange} placeholder="County" />
-        <input type="text" onChange={handleChange} placeholder="Image address" />
-        <input type="text" onChange={handleChange} placeholder="Type" />
-        <input type="text" onChange={handleChange} placeholder="Beds" />
-        <input type="text" onChange={handleChange} placeholder="Bathrooms" /> */}
-
         <input type="text" onChange={handleChange} name="county" value={formData.county} placeholder="County" />
         <input type="text" onChange={handleChange} name="image" value={formData.image} placeholder="Image address" />
         <input type="text" onChange={handleChange} name="type" value={formData.type} placeholder="Type" />
@@ -49,6 +45,8 @@ function ListingsForm({ homes, onAddHome }) {
         <input type="text" onChange={handleChange} name="bathrooms" value={formData.bathrooms} placeholder="Bathrooms" />
         <button type="submit">Add Home</button>
     </form>
+
+    <Card homes={homes} />
     </div>
 
   );

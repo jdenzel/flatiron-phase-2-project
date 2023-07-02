@@ -12,11 +12,12 @@ function Filter({ homes, onFilterChange }) {
             return (
                 (county === "All" || home.county === county) &&
                 (type === "All" || home.type === type) &&
-                (beds === "All" || home.beds === beds) &&
-                (bathrooms === "All" || home.bathrooms === bathrooms)
+                (beds === "All" || home.beds == beds) &&
+                (bathrooms === "All" || home.bathrooms == bathrooms)
             );
         });
         onFilterChange(filteredHomes);
+        console.log(filteredHomes)
         console.log(county)
         console.log(type)
         console.log(beds)
@@ -43,7 +44,7 @@ function Filter({ homes, onFilterChange }) {
                 Type:
                 <select value={type} onChange={(e) => setType(e.target.value)}>
                     <option value="All">All</option>
-                    <option value="Apartment">Condo</option>
+                    <option value="Apartment">Apartment</option>
                     <option value="Condo">Condo</option>
                     <option value="House">House</option>
                     <option value="Townhouse">Townhouse</option>
