@@ -2,13 +2,15 @@ import React, {useState} from "react";
 
 function Filter({ homes, onFilterChange }) {
 
-    const [county, setCounty] = useState('');
-    const [type, setType] = useState('');
-    const [beds, setBeds] = useState('');
-    const [bathrooms, setBathrooms] = useState('');
-    const [favorites, setFavorites] = useState([]);
+    const [county, setCounty] = useState('All');
+    const [type, setType] = useState('All');
+    const [beds, setBeds] = useState('All');
+    const [bathrooms, setBathrooms] = useState('All');
 
     const handleFilter = () => {
+
+
+
         const filteredHomes = homes.filter((home) => {
             return (
                 (county === "All" || home.county === county) &&
@@ -18,19 +20,19 @@ function Filter({ homes, onFilterChange }) {
             );
         });
         onFilterChange(filteredHomes);
+        console.log(homes)
         console.log(filteredHomes)
         console.log(county)
         console.log(type)
         console.log(beds)
         console.log(bathrooms)
     };
-
     return (
         <div>
             <label>
                 County:
                 <select value={county} onChange={(e) => setCounty(e.target.value)}>
-                    <option value="All">All</option>
+                    <option defaultValue="All">All</option>
                     <option value="Anne Arundel">Anne Arundel</option>
                     <option value="Baltimore">Baltimore</option>
                     <option value="Carroll">Carroll</option>
@@ -44,7 +46,7 @@ function Filter({ homes, onFilterChange }) {
             <label>
                 Type:
                 <select value={type} onChange={(e) => setType(e.target.value)}>
-                    <option value="All">All</option>
+                    <option defaultValue="All">All</option>
                     <option value="Apartment">Apartment</option>
                     <option value="Condo">Condo</option>
                     <option value="House">House</option>
@@ -54,7 +56,7 @@ function Filter({ homes, onFilterChange }) {
             <label>
                 Beds:
                 <select value={beds} onChange={(e) => setBeds(e.target.value)}>
-                    <option value="All"> All </option>
+                    <option defaultValue="All"> All </option>
                     {/* <option>Number of Beds</option> */}
                     <option value="1">1 Bed</option>
                     <option value="2">2 Beds</option>
@@ -65,7 +67,7 @@ function Filter({ homes, onFilterChange }) {
             <label>
                 Bathrooms:
                 <select value={bathrooms} onChange={(e) => setBathrooms(e.target.value)}>
-                    <option value="All"> All </option>
+                    <option defaultValue="All"> All </option>
                     {/* <option>Number of Baths</option> */}
                     <option value="1">1 Bath</option>
                     <option value="2">2 Baths</option>
@@ -73,7 +75,6 @@ function Filter({ homes, onFilterChange }) {
                     <option value="4">4 Baths</option>
                 </select>
             </label>
-            
             <button onClick={handleFilter}>Filter</button>
         </div>
     );

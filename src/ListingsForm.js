@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import Card from "./Card";
 
 function ListingsForm({ homes, onAddHome }) {
 
@@ -34,7 +33,7 @@ function ListingsForm({ homes, onAddHome }) {
     }
 
   return (
-    <div className="form">
+    <div className="form" id="addHome">
       <h1>ListingsForm</h1>
       <p>ListingsForm page body content</p>
       <form onSubmit={handleSubmit}>
@@ -45,8 +44,6 @@ function ListingsForm({ homes, onAddHome }) {
         <input type="text" onChange={handleChange} name="bathrooms" value={formData.bathrooms} placeholder="Bathrooms" />
         <button type="submit">Add Home</button>
     </form>
-
-    {/* <Card homes={homes} /> */}
     </div>
 
   );
