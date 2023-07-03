@@ -9,7 +9,7 @@ function Listings({ homes }) {
     function handleFilterChange(filteredHomes) {
         setFilteredHomes(filteredHomes);
     }
-    
+
     return (
         <div className="listings">
             <Filter homes={homes} onFilterChange={handleFilterChange} />

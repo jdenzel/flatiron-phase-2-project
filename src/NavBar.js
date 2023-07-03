@@ -7,15 +7,15 @@ function NavBar() {
     <div className="navbar">
       <ul>
         <li>
-        <NavLink to="/home">Home</NavLink>
+          <NavLink to="/home">Home</NavLink>
         </li>
         <li>
-        <NavLink to="/listings">Listings</NavLink>
+          <NavLink to="/listings">Listings</NavLink>
         </li>
         <li>
-        <NavLink to="/listingsform">List a Home</NavLink>
+          <NavLink to="/listingsform">List a Home</NavLink>
         </li>
-        </ul>
+      </ul>
     </div>
   );
 }
