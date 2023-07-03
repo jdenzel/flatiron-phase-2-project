@@ -1,46 +1,38 @@
 # Maryland home finder
 
-## Set up
+## Description
+This app is a listings of homes in Maryland. The cards that have the house information can be filtered by county, type of house, number of beds, and number of bathrooms. I've also included a form to list your own home.
 
-Fork and 
+---
+## **Set up**
+---
 
-### `npm start`
+Front end repo is deployed through Netlify:
+https://main--whimsical-hamster-355ad2.netlify.app/home
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Backend repo is deployed through render:
+https://json-server-for-phase-2-project.onrender.com
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+You can also fork and clone the repo to your local machine then use `npm install` to install dependencies then use `npm start server` to get the app started.
 
-### `npm test`
+You will also need to fork and clone the back end repo for the app to work. The repo can be found below. After forking and cloning, use `npm install` then `npm run dev` to get the server running.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
+---
 ## Backend Code Github Repository
 
 https://github.com/jdenzel/flatiron-phase-2-project-json-server
 
-## Learn More
+---
+## Video walkthrough of the app
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[Maryland home finder](https://youtu.be/LcJIhgWe82A)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+## **References**
 
-### Deployment
+Images that were used came from: [Homes](https://www.homes.com/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+----
+## License
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[MIT](https://choosealicense.com/licenses/mit/)
