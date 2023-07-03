@@ -11,12 +11,13 @@ function App() {
 
   const [homes, setHome] = useState([]);
 
-  useEffect(() => { async function getHome() {
-    const response = await fetch('http://localhost:3333/homes');
-    const data = await response.json();
-    setHome(data);
-  }
-  getHome();  
+  useEffect(() => {
+    async function getHome() {
+      const response = await fetch('http://localhost:3333/homes');
+      const data = await response.json();
+      setHome(data);
+    }
+    getHome();
   }, []);
 
   const onAddHome = (newHome) => {
@@ -26,17 +27,17 @@ function App() {
     <div>
       <NavBar />
       <Route exact path="/home" >
-      <Home homes={homes} />
+        <Home homes={homes} />
       </Route>
 
-      <Route path="/listings" > 
-      <Listings homes={homes} />
+      <Route path="/listings" >
+        <Listings homes={homes} />
       </Route>
 
       <Route path="/listingsform" >
-      <ListingsForm onAddHome={onAddHome} homes={homes} />
+        <ListingsForm onAddHome={onAddHome} homes={homes} />
       </Route>
-      </div>
+    </div>
   );
 }
 export default App;

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
@@ -9,16 +9,7 @@ function Filter({ homes, onFilterChange }) {
     const [beds, setBeds] = useState('All');
     const [bathrooms, setBathrooms] = useState('All');
 
-    const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
-
     const handleFilter = () => {
-
-
-
         const filteredHomes = homes.filter((home) => {
             return (
                 (county === "All" || home.county === county) &&
@@ -83,13 +74,9 @@ function Filter({ homes, onFilterChange }) {
                 </select>
             </label>
             <div>
-            <button class="filter-btn" onClick={handleFilter}>Filter</button>
+                <button class="filter-btn" onClick={handleFilter}>Filter</button>
+            </div>
         </div>
-        </div>
-        
-        
-
-
     );
 }
 
