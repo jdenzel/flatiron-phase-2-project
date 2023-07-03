@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import Video from './Video';
 
 function Home() {
