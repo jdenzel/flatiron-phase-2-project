@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Card from "./Card";
 import Filter from "./Filter";
 
+//Route 2
 function Listings({ homes }) {
 
     const [filteredHomes, setFilteredHomes] = useState(homes);

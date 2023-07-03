@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+//Route 3
 function ListingsForm({ onAddHome }) {
 
     const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ function ListingsForm({ onAddHome }) {
         bathrooms: "",
     });
 
+    // handles the user input of the form
     function handleChange(event) {
         setFormData({
             ...formData,
@@ -19,7 +21,6 @@ function ListingsForm({ onAddHome }) {
 
     function handleSubmit(event) {
         event.preventDefault()
-
 
         fetch("http://localhost:3333/homes", {
             method: "POST",

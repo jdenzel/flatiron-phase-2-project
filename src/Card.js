@@ -2,7 +2,7 @@ import React from "react";
 
 function Card({ homes }) {
   return (
-    <div  >
+    <div>
       {homes.map((home, index) => (
         <div className="card" key={index}>
           <h1>Price: {home.price}</h1>
@@ -13,6 +13,7 @@ function Card({ homes }) {
       ))}
     </div>
   );
+  // \u25CF is the unicode for a bullet point
 }
 
 export default Card;

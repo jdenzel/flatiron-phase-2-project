@@ -6,6 +6,7 @@ function Filter({ homes, onFilterChange }) {
     const [beds, setBeds] = useState('All');
     const [bathrooms, setBathrooms] = useState('All');
 
+    //function to filter all the cards depending on the filter options
     const handleFilter = () => {
         const filteredHomes = homes.filter((home) => {
             return (
@@ -18,12 +19,7 @@ function Filter({ homes, onFilterChange }) {
             );
         });
         onFilterChange(filteredHomes);
-        console.log(homes)
-        console.log(filteredHomes)
-        console.log(county)
-        console.log(type)
-        console.log(beds)
-        console.log(bathrooms)
+
     };
     return (
         <div className="filter-box">
@@ -54,8 +50,7 @@ function Filter({ homes, onFilterChange }) {
             <label>
                 Beds:
                 <select value={beds} onChange={(e) => setBeds(e.target.value)}>
-                    <option defaultValue="All"> All </option>
-
+                    <option defaultValue="All"> All </option> 
                     <option value="1">1 Bed</option>
                     <option value="2">2 Beds</option>
                     <option value="3">3 Beds</option>
@@ -76,6 +71,7 @@ function Filter({ homes, onFilterChange }) {
                 <button class="filter-btn" onClick={handleFilter}>Filter</button>
             </div>
         </div>
+        // maximum beds and bathrooms is 4
     );
 }
 
