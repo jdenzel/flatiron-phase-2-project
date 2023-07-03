@@ -11,8 +11,10 @@ function Filter({ homes, onFilterChange }) {
             return (
                 (county === "All" || home.county === county) &&
                 (type === "All" || home.type === type) &&
-                (beds === "All" || home.beds === beds) &&
-                (bathrooms === "All" || home.bathrooms === bathrooms)
+                // eslint-disable-next-line
+                (beds === "All" || home.beds == beds) &&
+                // eslint-disable-next-line
+                (bathrooms === "All" || home.bathrooms == bathrooms)
             );
         });
         onFilterChange(filteredHomes);
