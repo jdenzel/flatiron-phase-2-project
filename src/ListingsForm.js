@@ -22,7 +22,7 @@ function ListingsForm({ onAddHome }) {
     function handleSubmit(event) {
         event.preventDefault()
 
-        fetch("http://localhost:3333/homes", {
+        fetch("https://phase-2-backend.onrender.com/homes", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),

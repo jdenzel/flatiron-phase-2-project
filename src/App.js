@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     async function getHome() {
-      const response = await fetch('http://localhost:3333/homes');
+      const response = await fetch('https://phase-2-backend.onrender.com/homes');
       const data = await response.json();
       setHome(data);
     }
