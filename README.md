@@ -11,7 +11,7 @@ Front end repo is deployed through Netlify:
 https://main--whimsical-hamster-355ad2.netlify.app/home
 
 Backend repo is deployed through render:
-https://json-server-for-phase-2-project.onrender.com
+https://phase-2-backend.onrender.com
 
 You can also fork and clone the repo to your local machine then use `npm install` to install dependencies then use `npm start server` to get the app started.
 
